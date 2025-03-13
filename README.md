@@ -16,8 +16,9 @@ This project will investigate the following questions:
 - Are there rating differences between free-to-play and paid games?
 - Does a game’s price correlate with the number of reviews it has received?
 - How do Steam user ratings compare with Metacritic critic and user scores?
-
+## Motivation
+I chose this project because I am genuinely interested in Steam games and curious about whether a game’s price influences key statistics such as user ratings and review counts. Through this research, I aim to explore how pricing might affect user engagement and perception on gaming platforms. Additionally, this project gives me an opportunity to improve my data analysis skills by working with real-world datasets and learning how to collect and utilize open-source data efficiently.
 ## Dataset
 ### Source:
-- *Kaggle - Steam Store Games Dataset(ı found a clean dataset)*
-- *Metacritic - Game Ratings and Reviews Dataset*
+- *Kaggle - Steam Store Games Dataset(ı found a clean dataset) https://www.kaggle.com/datasets/nikdavis/steam-store-games *
+- *Metacritic - Game Ratings and Reviews Dataset metacritic.com*
