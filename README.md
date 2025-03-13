@@ -1,7 +1,8 @@
 # Analysis of the Relationship Between Game Prices and Player Ratings: A Study on Steam and Metacritic Data
 
 ## Overview
-This project aims to analyze the relationship between game prices and user ratings on the Steam and Metacritic platforms. By utilizing publicly available data, we seek to determine whether a game's price influences its player ratings and explore additional factors that may impact this relationship.
+## Overview
+This project focuses on analyzing the relationship between game prices and player ratings on Steam and Metacritic. With the growing number of games released each year, understanding how price affects user perception has become an interesting question for both players and developers. By exploring data such as game prices, genres, release years, and user scores, this research aims to uncover whether higher-priced games tend to receive better ratings and how other factors like genre or release date influence this relationship. Additionally, comparing Steam and Metacritic ratings will help highlight any differences between user and critic reviews.
 
 ### Key Research Questions:
 ➡ *Does a game's price affect its player ratings?*  
