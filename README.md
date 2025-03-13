@@ -21,4 +21,4 @@ I chose this project because I am genuinely interested in Steam games and curiou
 ## Dataset
 ### Source:
 - *Kaggle - Steam Store Games Dataset(ı found a clean dataset) https://www.kaggle.com/datasets/nikdavis/steam-store-games *
-- *Metacritic - Game Ratings and Reviews Dataset metacritic.com*
+- *Metacritic - Game Ratings and Reviews Dataset [metacritic.com](https://www.metacritic.com/)*
