@@ -1,25 +1,103 @@
-# Analysis of the Relationship Between Game Prices and Player Ratings: A Study on Steam and Metacritic Data
+# Analysis of the Relationship Between Game Prices and Player Ratings on Steam
+
+## Motivation
+As someone who has been playing games for many years and regularly uses Steam, I’ve always been curious about what influences how players rate a game. Prices on Steam vary widely, and I often wondered whether higher-priced games truly offer better experiences or whether budget and free-to-play games are equally appreciated. Steam is also a platform with an enormous user base and vast amounts of publicly available data. Thanks to this data richness, I knew I could dive into real-world statistics to answer meaningful questions with accessible and well-structured datasets. That made it the perfect environment for both exploring my interest and sharpening my data analysis skills.
 
 ## Overview
-## Overview
-This project focuses on analyzing the relationship between game prices and player ratings on Steam and Metacritic. With the growing number of games released each year, understanding how price affects user perception has become an interesting question for both players and developers. By exploring data such as game prices, genres, release years, and user scores, this research aims to uncover whether higher-priced games tend to receive better ratings and how other factors like genre or release date influence this relationship. Additionally, comparing Steam and Metacritic ratings will help highlight any differences between user and critic reviews.
+This project investigates the relationship between game prices and player ratings using a dataset of over 93,000 games published on the Steam platform. As the number of available games grows and player feedback becomes more prominent in purchasing decisions, understanding how price interacts with user ratings has become a relevant issue for both developers and gamers. Our analysis covers not only this core relationship but also explores how player ratings vary by game type (e.g., singleplayer vs. multiplayer), by payment model (free vs. paid), and across different release periods (e.g., pre-pandemic vs. post-pandemic).
+
+Throughout the project, we perform data cleaning, exploratory data analysis (EDA), and hypothesis testing. Each hypothesis is examined using statistical tests such as Pearson correlation and t-tests, and findings are visualized with bar charts, box plots, and correlation heatmaps.
 
 ### Key Research Questions:
-➡ *Does a game's price affect its player ratings?*  
-➡ *Do factors such as genre and release year modify this relationship?*  
-➡ *Is there a difference between Steam user ratings and Metacritic scores?*  
+1. Does price correlate with player ratings?
+2. Are free games rated more positively than paid ones?
+3. Are multiplayer or singleplayer games rated more positively?
+4. Has the price-rating relationship changed across different periods (e.g., COVID period)?
 
-## Research Objectives
-This project will investigate the following questions:
-- Is there a significant correlation between game price and player rating?
-- How does this relationship vary across different game genres (e.g., Action, Indie, RPG)?
-- Has this correlation changed over time (e.g., games released after 2020 vs. older games)?
-- Are there rating differences between free-to-play and paid games?
-- Does a game’s price correlate with the number of reviews it has received?
-- How do Steam user ratings compare with Metacritic critic and user scores?
-## Motivation
-I chose this project because I am genuinely interested in Steam games and curious about whether a game’s price influences key statistics such as user ratings and review counts. Through this research, I aim to explore how pricing might affect user engagement and perception on gaming platforms. Additionally, this project gives me an opportunity to improve my data analysis skills by working with real-world datasets and learning how to collect and utilize open-source data efficiently.
 ## Dataset
-### Source:
-- *Kaggle - Steam Store Games Dataset(ı found a clean dataset) https://www.kaggle.com/datasets/nikdavis/steam-store-games *
-- *Metacritic - Game Ratings and Reviews Dataset [metacritic.com](https://www.metacritic.com/)*
+**Source:** [93182 Steam Games](https://www.kaggle.com/datasets/joebeachcapital/top-1000-steam-games?utm_source=chatgpt.com)
+# Steam Games: Price vs Rating Analysis
+
+## Data Cleaning
+
+The original dataset had 39 columns. We selected only the relevant ones:
+
+- AppID
+- Name
+- Release date
+- Price
+- Positive
+- Negative
+- Categories
+- Genres
+- Tags
+
+Further steps:
+- Removed games with fewer than 200 total ratings.
+- Removed games priced above $100.
+- Created a new `Rating` column as:
+
+```python
+Rating = Positive / (Positive + Negative)
+```
+
+The resulting clean dataset was saved as `clean_steam.csv`.
+
+## Exploratory Data Analysis (EDA)
+
+We visualized various aspects of the dataset:
+- Scatter plots and box plots to show price-rating distribution.
+- Bar charts showing average ratings across price ranges and periods.
+- Correlation heatmaps to compare free vs. paid games.
+- Periodic analysis using custom bins: 2006–2013, 2013–2019, 2019–2020, 2020–2023.
+
+## Hypothesis Testing
+
+### H1: Price ↔ Rating Correlation
+- **Test:** Pearson and Spearman correlation
+- **Result:** Weak but statistically significant positive correlation (Pearson r = 0.0449, p = 0.0204)
+
+### H2: Free vs Paid Games
+- **Test:** Independent two-sample t-test
+- **Result:**
+  - T-statistic = -4.04
+  - p = 0.0001
+- **Conclusion:** Free games are rated significantly higher.
+
+### H3: Singleplayer vs Multiplayer
+- **Test:** t-test
+- **Result:**
+  - T-statistic = 7.98
+  - p < 0.001
+- **Conclusion:** Singleplayer games are rated higher than multiplayer games.
+
+### H4: Periodic Price–Rating Correlation
+- **Test:** Pearson correlation per period
+- **Result:**
+  - 2013–2019: r = 0.1306 (p < 0.001)
+  - 2020–2023: r = -0.1508 (p < 0.001)
+- **Conclusion:** The correlation between price and rating weakened significantly after 2020.
+
+## Summary of Insights
+
+- Free games tend to receive better ratings than paid games.
+- Singleplayer games receive higher ratings compared to multiplayer titles.
+- The correlation between price and user rating shifted notably after the pandemic.
+- Data cleaning choices (like filtering out low-rating-count games and overpriced outliers) were critical to achieving reliable results.
+
+## Tools Used
+
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- SciPy
+- Google Colab
+
+## Files in This Repository
+
+- `clean_steam.csv` — Cleaned dataset used in the project
+- `EDA_+_Hypothesis_.ipynb` — Jupyter notebook with all code
+- `README.md` — Project summary and methodology
+
+
