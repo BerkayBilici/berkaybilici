@@ -85,7 +85,7 @@ We visualized various aspects of the dataset:
 -  2013–2019 | 0.130641 | 0.000002
 -  2019–2020 |-0.099659 | 0.099100
 -  2020–2023 |-0.150823 | 0.000014
-- **Conclusion:** The correlation between price and rating weakened significantly after 2020.
+- **Conclusion:** The correlation between price and rating changed significantly after 2020.
   
 ![image](https://github.com/user-attachments/assets/9e005c66-628c-45bc-8156-2819632edd74)
 
