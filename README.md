@@ -55,7 +55,9 @@ We visualized various aspects of the dataset:
 
 ### H1: Price ↔ Rating Correlation
 - **Test:** Pearson and Spearman correlation
-- **Result:** Weak but statistically significant positive correlation (Pearson r = 0.0449, p = 0.0204)
+- **Result:** Weak but statistically significant positive correlation (Pearson r = 0.0449, p = 0.0204, Spearman 0.0637 p-value: 0.001)
+  
+![image](https://github.com/user-attachments/assets/9704db41-eeb2-4c6d-adf5-24fda83d21c3)
 
 ### H2: Free vs Paid Games
 - **Test:** Independent two-sample t-test
@@ -63,6 +65,8 @@ We visualized various aspects of the dataset:
   - T-statistic = -4.04
   - p = 0.0001
 - **Conclusion:** Free games are rated significantly higher.
+  
+![image](https://github.com/user-attachments/assets/147efd6b-124a-4711-b770-281e909126b8)
 
 ### H3: Singleplayer vs Multiplayer
 - **Test:** t-test
@@ -70,13 +74,20 @@ We visualized various aspects of the dataset:
   - T-statistic = 7.98
   - p < 0.001
 - **Conclusion:** Singleplayer games are rated higher than multiplayer games.
+  
+![image](https://github.com/user-attachments/assets/b3ea17d6-e027-4d6b-9b38-8eb8f483196e)
 
 ### H4: Periodic Price–Rating Correlation
 - **Test:** Pearson correlation per period
 - **Result:**
-  - 2013–2019: r = 0.1306 (p < 0.001)
-  - 2020–2023: r = -0.1508 (p < 0.001)
+-    Period  Pearson_r   P_value
+-  2006–2013 | 0.135986 | 0.034113
+-  2013–2019 | 0.130641 | 0.000002
+-  2019–2020 |-0.099659 | 0.099100
+-  2020–2023 |-0.150823 | 0.000014
 - **Conclusion:** The correlation between price and rating weakened significantly after 2020.
+  
+![image](https://github.com/user-attachments/assets/9e005c66-628c-45bc-8156-2819632edd74)
 
 ## Summary of Insights
 
