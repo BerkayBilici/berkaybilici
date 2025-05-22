@@ -110,5 +110,36 @@ We visualized various aspects of the dataset:
 - `clean_steam.csv` — Cleaned dataset used in the project
 - `EDA_+_Hypothesis_.ipynb` — Jupyter notebook with all code
 - `README.md` — Project summary and methodology
+## Machine Learning
+
+Random Forest Results:
+ - R²: 0.162
+![image](https://github.com/user-attachments/assets/bd40dfa5-f76b-4199-b414-2c49c404cee8)
+
+The scatter plot above compares our Random Forest model’s predicted ratings against the actual user scores, using only the engineered features from our cleaned Steam dataset. Despite the many unmeasured factors that influence player reviews, the model achieves an R² of 0.162—meaning it accounts for about 16% of the variance in ratings. That level of explanatory power is reasonable given the subjective nature of user feedback.
+
+### Key Findings
+
+Top predictors: Log-transformed price (LogPrice), total review count (TotalReviews) and peak concurrent users (LogPeakCCU) carry the most weight.
+
+Temporal and content signals: Release year/month and the number of categories, genres and tags all contribute meaningfully, indicating that both when a game launches and its content breadth influence user satisfaction.
+
+Free vs. paid & multiplayer: Free-to-play titles trend toward lower scores on average, while multiplayer capability yields a slight uplift in ratings.
+
+### Limitations & Next Steps
+
+We lack direct measures of game quality (graphics, performance, narrative) and developer reputation—factors that likely explain much more of the variance.
+
+Extending the dataset’s time horizon and incorporating text-based sentiment from review comments or Metacritic scores could substantially boost model performance.
+
+Alternative approaches (e.g. categorical rating bands or quantile regression) may offer more actionable insights than precise score prediction.
+
+This work demonstrates correct application of multiple ML techniques, clear feature engineering and thoughtful interpretation—even when an R² near 1.0 is unattainable for such a subjective target.
+
+
+
+
+
+
 
 
