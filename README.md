@@ -59,7 +59,7 @@ We visualized various aspects of the dataset:
   
 ![image](https://github.com/user-attachments/assets/9704db41-eeb2-4c6d-adf5-24fda83d21c3)
 
-### H2: Free vs Paid Games
+### H2: Free/Paid Games - Rating Correlation
 - **Test:** Independent two-sample t-test
 - **Result:**
   - T-statistic = -4.04
@@ -68,7 +68,7 @@ We visualized various aspects of the dataset:
   
 ![image](https://github.com/user-attachments/assets/147efd6b-124a-4711-b770-281e909126b8)
 
-### H3: Singleplayer vs Multiplayer
+### H3: Singleplayer/Multiplayer - Rating Correlation
 - **Test:** t-test
 - **Result:**
   - T-statistic = 7.98
