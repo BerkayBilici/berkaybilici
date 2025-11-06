@@ -137,7 +137,13 @@ Alternative approaches (e.g. categorical rating bands or quantile regression) ma
 This work demonstrates correct application of multiple ML techniques, clear feature engineering and thoughtful interpretation—even when an R² near 1.0 is unattainable for such a subjective target.
 
 
+---
 
+### 🧩 Team Projects
+
+- [Online Store Platform (CS308 Project)](https://github.com/yagmurgcm/CS308--OnlineStoreProject) — Full-stack e-commerce system built with NestJS & MySQL  
+- [SURate](https://github.com/OzanMuhcu/SUrate) — University course rating platform built with Flutter & Firebase
+  
 
 
 
